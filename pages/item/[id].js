@@ -24,7 +24,7 @@ const ReadSingleItem = (props) => {
 }
 
 export const getServerSideProps = async (context) => {
-  const response = await fetch(`http://localhost:3000/api/item/${context.query.id}`)
+  const response = await fetch(`https://next-fullapp.vercel.app/api/item/${context.query.id}`)
   const singleItem = await response.json()
 
   return {
